@@ -1,0 +1,1 @@
+web: gunicorn  leaderboard.leaderboard.wsgi:application --log-file -
