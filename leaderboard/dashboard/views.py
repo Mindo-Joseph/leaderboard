@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import csv, io
 from django.contrib import messages
-from dashboard.models import Details
+from leaderboard.dashboard.models import Details
 from django.contrib.auth.decorators import permission_required
 
 @permission_required('admin.can_add_log_entry')
