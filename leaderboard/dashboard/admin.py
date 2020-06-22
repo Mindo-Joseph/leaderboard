@@ -1,3 +1,3 @@
 from django.contrib import admin
-from dashboard.models import Details
+from leaderboard.dashboard.models import Details
 admin.site.register(Details)
