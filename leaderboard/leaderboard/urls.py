@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from dashboard.views import details_upload, dashboard
+from leaderboard.dashboard.views import details_upload, dashboard
 
 urlpatterns = [
     path('admin/', admin.site.urls),
