@@ -1,5 +1,51 @@
-
-
-{% for instance in object_list %}
-    <p>{{instance.full_name}} | {{instance.total_points}}</p>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Leaderboard</title>
+</head>
+<body>
+    <div class="top">
+        <div class="logo">
+            <h3>HNGi7 Standings </h3>
+        </div>
+    
+    </div>
+    <div class="results">
+        <table>
+            <tr>
+              <th>
+                Rank
+              </th>
+              <th>
+                Name
+              </th>
+              <th>
+                Slack Username
+              </th>
+              <th>
+                Email
+              </th>
+              <th>
+                Points
+              </th>
+            </tr>
+            {% for instance in object_list %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{instance.full_name}}</td>
+                <td>{{instance.user_name}}</td>
+                <td>{{instance.email}}</td>
+                <td>{{instance.total_points}}</td>
+            </tr>
+            {%endfor%}
+          </table>
+    </div>
+    
+    
+    
+</body>
+</html>
