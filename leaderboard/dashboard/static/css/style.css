@@ -20,10 +20,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.button {
-  position: absolute;
-  right: 10px;
-  top: 5px;
+.upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.upload-form,.reminder {
+  margin-top: 30px;
+ 
 }
 table {
   /* position relative to include a band on the left of the container */
